@@ -1,0 +1,7 @@
+{
+  "id": "incident-triage",
+  "name": "Incident Triage",
+  "goal": "Triage incoming incidents, investigate root cause, and route to the appropriate team",
+  "orchestrator": "triage-bot",
+  "agents": ["researcher"]
+}
