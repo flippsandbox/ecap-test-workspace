@@ -5,5 +5,5 @@
   "orchestrator": "triage-bot",
   "agents": [
     "researcher"
-  ],
+  ]
 }
