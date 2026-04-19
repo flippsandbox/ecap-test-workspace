@@ -1,7 +1,11 @@
 {
   "id": "incident-triage",
   "name": "Incident Triage",
-  "goal": "Triage incoming incidents, investigate root cause, and route to the appropriate team",
+  "goal": "Triage incoming incidents, investigate root cause, and route to the appropriate team. Keep all of us up-to-date",
   "orchestrator": "triage-bot",
-  "agents": ["researcher"]
+  "agents": [
+    "researcher"
+  ],
+  "created_at": "2026-04-19T15:04:39.954Z",
+  "updated_at": "2026-04-19T15:04:39.954Z"
 }
