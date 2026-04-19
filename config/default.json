@@ -1,0 +1,113 @@
+{
+  "llm": {
+    "defaultProvider": "stub",
+    "maxToolRounds": 12,
+    "agents": {
+      "triage": {
+        "model": "claude-sonnet-4-20250514",
+        "temperature": 0.3,
+        "maxTokens": 4096,
+        "toolsEnabled": true,
+        "mode": "local",
+        "remoteUrl": "http://localhost:3101"
+      },
+      "enhance": {
+        "model": "claude-sonnet-4-20250514",
+        "temperature": 0.5,
+        "maxTokens": 4096,
+        "toolsEnabled": false,
+        "mode": "local",
+        "remoteUrl": "http://localhost:3102"
+      },
+      "execution": {
+        "model": "claude-sonnet-4-20250514",
+        "temperature": 0.2,
+        "maxTokens": 4096,
+        "toolsEnabled": true,
+        "mode": "local",
+        "remoteUrl": "http://localhost:3103"
+      }
+    },
+    "providers": {
+      "anthropic": {
+        "supportsTools": true
+      },
+      "copilot": {
+        "supportsTools": true,
+        "baseURL": "http://localhost:4141",
+        "resolveAs": "anthropic"
+      },
+      "claude-cli": {
+        "supportsTools": true
+      },
+      "stub": {
+        "supportsTools": false
+      }
+    }
+  },
+  "tools": {
+    "allowPatterns": [
+      "^kubectl\\b",
+      "^git\\b",
+      "^gh\\b",
+      "^aws\\s+\\S+\\s+(describe|get|list)\\b",
+      "^terraform\\s+plan\\b",
+      "^curl\\b",
+      "^dig\\b",
+      "^nslookup\\b",
+      "^ls\\b",
+      "^cat\\b",
+      "^find\\b",
+      "^mkdir\\b",
+      "^cp\\b",
+      "^mv\\b",
+      "^jira\\b",
+      "^npm\\b",
+      "^npx\\b",
+      "^node\\b",
+      "^python3?\\b",
+      "^echo\\b",
+      "^touch\\b",
+      "^pwd\\b"
+    ],
+    "blockPatterns": [
+      "^kubectl\\s+delete\\b",
+      "^kubectl\\s+drain\\b",
+      "^aws\\s+\\S+\\s+(delete|terminate|remove|put|create|update|modify)\\b",
+      "^terraform\\s+apply\\b",
+      "^terraform\\s+destroy\\b",
+      "^git\\s+push\\s+--force\\b",
+      "^git\\s+reset\\s+--hard\\b",
+      "^gh\\s+pr\\s+merge\\b",
+      "^gh\\s+repo\\s+delete\\b",
+      "\\brm\\s",
+      "[;&|`$]",
+      "^find\\b.*-exec\\b",
+      "^find\\b.*-delete\\b"
+    ],
+    "triageBlockPatterns": [
+      "^gh\\s+(pr|issue)\\s+comment\\b",
+      "^gh\\s+pr\\s+create\\b",
+      "^gh\\s+issue\\s+create\\b",
+      "^gh\\s+pr\\s+close\\b",
+      "^gh\\s+pr\\s+edit\\b",
+      "^gh\\s+pr\\s+review\\b",
+      "^git\\s+commit\\b",
+      "^git\\s+push\\b",
+      "^git\\s+tag\\b",
+      "^git\\s+branch\\s+-[dD]\\b",
+      "^git\\s+checkout\\s+-b\\b",
+      "^git\\s+merge\\b",
+      "^git\\s+rebase\\b",
+      "^git\\s+stash\\b",
+      "^jira\\s+(create|edit|transition|assign|comment)\\b",
+      "^kubectl\\s+(apply|patch|edit|scale|rollout|label|annotate|exec)\\b",
+      "^curl\\s+.*-X\\s*(POST|PUT|PATCH|DELETE)\\b",
+      "^curl\\s+.*--data\\b",
+      "^curl\\s+.*-d\\s"
+    ],
+    "commandTimeout": 60000,
+    "maxFileSize": 1782579,
+    "allowedCommandsSummary": "git, kubectl, gh, jira, aws (read-only), terraform plan, curl, dig, nslookup, ls, cat, find, npm, npx, node, python, echo, touch, pwd"
+  }
+}
