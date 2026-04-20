@@ -1,9 +1,0 @@
-{
-  "id": "another-test",
-  "name": "another-test",
-  "goal": "Triage incoming incidents, investigate root cause, and route to the appropriate team. Keep all of us up-to-date",
-  "orchestrator": "triage-bot",
-  "agents": [
-    "researcher"
-  ]
-}
