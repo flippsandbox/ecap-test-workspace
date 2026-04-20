@@ -1,9 +1,15 @@
 ---
 name: researcher
-description: "Investigates issues and gathers context"
+description: Investigates issues and gathers context
 phase: triage
-tools: [run_command, read_file]
-skills: all
+tools:
+  - run_command
+  - read_file
+  - load_skill
+skills:
+  - incident-response
+provider: stub
+model: test-model
+tool_mode: triage
 ---
-
-You are the researcher agent. Investigate issues thoroughly before recommending actions.
+You are an upgraded researcher. Use all available tools to investigate.
