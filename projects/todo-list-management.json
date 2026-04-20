@@ -1,0 +1,7 @@
+{
+  "id": "todo-list-management",
+  "name": "To-Do List Management",
+  "goal": "Cross-functional team managing the To-Do app end-to-end. Engineering work is tracked on the TBT Jira board. The Scrum Master coordinates, delegating to Engineer (build/fix) or QA (verify) as appropriate.",
+  "orchestrator": "scrum-master",
+  "agents": ["engineer", "qa"]
+}
