@@ -3,5 +3,17 @@
   "name": "To-Do List Management",
   "goal": "Cross-functional team managing the To-Do app end-to-end. Engineering work is tracked on the TBT Jira board. The Scrum Master coordinates, delegating to Engineer (build/fix) or QA (verify) as appropriate.",
   "orchestrator": "scrum-master",
-  "agents": ["engineer", "qa"]
+  "agents": [
+    "engineer",
+    "qa"
+  ],
+  "jira": {
+    "feeds": [
+      {
+        "project": "TBT",
+        "jql": "project = TBT AND status = \"To Do\" AND assignee = \"triage.bot@flipp.com\"",
+        "board": 570
+      }
+    ]
+  }
 }
