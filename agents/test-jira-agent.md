@@ -1,10 +1,13 @@
 ---
 name: test-jira-agent
-description: "Test agent for Jira connectivity from inside the pod"
+description: Test agent for Jira connectivity from inside the pod
 phase: triage
 provider: anthropic
 model: claude-haiku-4-5
-tools: [load_skill, run_command, read_file]
+tools:
+  - load_skill
+  - run_command
+  - read_file
 skills: all
 ---
 

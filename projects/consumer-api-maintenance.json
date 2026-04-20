@@ -1,0 +1,14 @@
+{
+  "id": "consumer-api-maintenance",
+  "name": "Consumer API Maintenance",
+  "goal": "Cross-functional team maintaining the Python consumer-api (external-facing APIs). The Scrum Master orchestrates; the Product Owner prioritizes via WSJF on the Jira CAPI board; Engineer builds/fixes with strict backward-compat discipline; QA verifies contract/auth/rate-limit/compat; FinOps monitors AWS spend and reviews cost-impacting changes before merge.",
+  "orchestrator": "capi-scrum-master",
+  "agents": [
+    "capi-product-owner",
+    "capi-python-engineer",
+    "capi-qa-engineer",
+    "capi-finops-analyst"
+  ],
+  "created_at": "2026-04-20T21:55:05.500Z",
+  "updated_at": "2026-04-20T21:55:05.500Z"
+}
