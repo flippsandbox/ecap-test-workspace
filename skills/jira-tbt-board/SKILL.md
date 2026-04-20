@@ -41,3 +41,6 @@ jira issue comment add TBT-42 "Implemented the delete button per AC. Ready for Q
 - If a ticket field is ambiguous, read the ticket with `jira issue view` before acting
 - If status transition fails, `jira issue transitions TBT-42` shows valid next states
 - Never close a ticket as "Done" until QA has signed off in the ticket
+
+
+## For JIRA, always use ACLI, don't use MCP
